@@ -1,0 +1,12 @@
+{application, kraken_file,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { kraken_file_app, []}},
+  {env, []}
+ ]}.

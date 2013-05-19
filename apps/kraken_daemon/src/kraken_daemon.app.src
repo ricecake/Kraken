@@ -1,0 +1,12 @@
+{application, kraken_daemon,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { kraken_daemon_app, []}},
+  {env, []}
+ ]}.

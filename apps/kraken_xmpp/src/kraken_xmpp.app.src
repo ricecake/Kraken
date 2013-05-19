@@ -1,0 +1,13 @@
+{application, kraken_xmpp,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  exmpp
+                 ]},
+  {mod, { kraken_xmpp_app, []}},
+  {env, []}
+ ]}.

@@ -1,0 +1,12 @@
+{application, kraken_http,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { kraken_http_app, []}},
+  {env, []}
+ ]}.

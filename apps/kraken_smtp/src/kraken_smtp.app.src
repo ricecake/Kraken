@@ -1,0 +1,12 @@
+{application, kraken_smtp,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { kraken_smtp_app, []}},
+  {env, []}
+ ]}.
