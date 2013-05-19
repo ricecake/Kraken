@@ -1,0 +1,5 @@
+Kraken  
+
+This project aims to allow for passing messages around with amqp to generic applications.  
+The prompt for this was a desire to allow for not having to write scripts which perform the same basic action, but report  
+on the results in different ways, by passing the messages through a common distribution point.  
