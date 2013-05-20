@@ -25,8 +25,5 @@ start_link() ->
 
 init([]) ->
 	{ok, { {one_for_one, 5, 10}, [
-		?CHILD(kraken_server, worker, []),
-		?CHILD(kraken_listener_sup, supervisor, []),
-		?CHILD(kraken_listener_server, supervisor, []),
-		?CHILD(kraken_worker_sup, supervisor, [])
+		?CHILD(kraken_server, worker, [])
 	]} }.
