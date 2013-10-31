@@ -1,0 +1,40 @@
+{application, kraken,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { kraken_app, []}},
+  {env, [
+   {directories, [
+    {executeDirs, [{"/usr/local/lp/kraken/scripts/", ".", true}, {"/home/ricecake/Erlang/kraken/",".",true}]},
+    {safeCommands, [{"git", [["pull"], ["reset", "--hard"]]}, {"who", [["-a"]]}]}
+   ]},
+   {controllerParams, [
+    {username,<<"system">>},
+    {password,<<"3Xcro5M35TV5TzeC">>},
+    {vhost, <<"/">>},
+    {host, "tfm.nu"}
+   ]},
+   {messageParams, [
+    {username,<<"system">>},
+    {password,<<"3Xcro5M35TV5TzeC">>},
+    {vhost, <<"/">>},
+    {host, "tfm.nu"},
+    {relays, [
+      {smtp},
+      {xmpp},
+      {daemon}
+    ]}
+   ]},
+   {jobParams, [
+    {username,<<"system">>},
+    {password,<<"3Xcro5M35TV5TzeC">>},
+    {vhost, <<"/">>},
+    {host, "tfm.nu"}
+   ]}
+  ]}
+ ]}.
