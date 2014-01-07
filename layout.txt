@@ -1,0 +1,24 @@
+kraken_sup
+├── amqp_sup
+│   ├── amqp_listener_sup
+│   │   └── amqp_listener
+│   └── amqp_srv
+├── kraken_controller
+├── tasker_sup
+│   └── tasker
+└── worker_sup
+    ├── daemon_sup
+    │   └── daemon_srv
+    ├── exec_sup
+    │   └── exec_worker
+    ├── job_sup
+    │   └── job_workgroup_sup
+    │       └── job_workpool_sup
+    │           └── job_worker
+    ├── smtp_sup
+    │   └── smtp_emiter
+    └── xmpp_pool_sup
+        └── xmpp_sup
+            ├── xmpp_conn_srv
+            └── xmpp_emit_pool
+                └── xmpp_emiter
