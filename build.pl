@@ -4,7 +4,7 @@
 
 use strict;
 use File::Find ();
-
+use File::Copy;
 # Set the variable $File::Find::dont_use_nlink if you're using AFS,
 # since AFS cheats.
 
@@ -19,7 +19,13 @@ sub wanted;
 
 
 # Traverse desired filesystems
+my @sourceFiles;
 File::Find::find({wanted => \&wanted}, 'source');
+
+for my $file (@sourceFiles) {
+	my ($file, $name) = @{$file}{qw(name file)};	
+	copy($file,"src/$name");
+}
 exit;
 
 
@@ -28,7 +34,7 @@ sub wanted {
 
     (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
     -f _ &&
-    /^.*\.erl\z/s
-    && print("$_\n");
+    /^.*\.(?:erl|src)\z/s
+    && push(@sourceFiles, {name => $name, file => $_});
 }
 
