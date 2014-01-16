@@ -1,4 +1,4 @@
--module(smtp_emiter).
+-module({{MODULE}}).
 -behaviour(gen_server).
 -define(SERVER, ?MODULE).
 
